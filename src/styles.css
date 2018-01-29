@@ -1,3 +1,6 @@
+.container {
+  margin-top: 10px;
+}
 @media screen and (min-width: 200px) and (max-width: 576px) {
 }
 
@@ -9,17 +12,13 @@
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
   .container {
-    margin-left: 100px;
-    margin-right: 100px;
-    max-height: 1000px;
+    min-height: auto;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
-    margin-left: 100px;
-    margin-right: 100px;
-    max-height: 1000px;
+    min-height: auto;
   }
 }
 

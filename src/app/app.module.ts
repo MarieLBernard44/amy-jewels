@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routing } from './app-routing.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 /////////////////////////////////////    COMPONENTS    //////////////////////////////////////////////////////////////
 import { AppComponent } from './app.component';
@@ -43,7 +43,8 @@ import { InstagramComponent } from './pages/instagram/instagram.component';
   imports: [
     BrowserModule,
     Routing,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    AngularFontAwesomeModule
   ],
   providers: [
   ],
