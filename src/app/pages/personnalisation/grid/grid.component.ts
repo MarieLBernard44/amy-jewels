@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HEXAPATTERN } from '../../patterns/perles-mock';
+import { HEXAPATTERN } from '../../../patterns/perles-mock';
 
 @Component({
   selector: 'app-grid',

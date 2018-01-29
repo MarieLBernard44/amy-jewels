@@ -5,15 +5,39 @@ import { Routing } from './app-routing.module';
 
 
 /////////////////////////////////////    COMPONENTS    //////////////////////////////////////////////////////////////
-import { GridComponent } from './pages/grid/grid.component';
 import { AppComponent } from './app.component';
+import { EnterComponent } from './pages/enter/enter.component';
+import { MenuComponent } from './pages/menu/menu.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ConceptComponent } from './pages/concept/concept.component';
+import { LabStepMenuComponent } from './pages/personnalisation/lab-step-menu/lab-step-menu.component';
+import { LabEnterComponent } from './pages/personnalisation/lab-enter/lab-enter.component';
+import { LabTypeComponent } from './pages/personnalisation/lab-type/lab-type.component';
+import { LabAppretsComponent } from './pages/personnalisation/lab-apprets/lab-apprets.component';
+import { LabPatternComponent } from './pages/personnalisation/lab-pattern/lab-pattern.component';
+import { GridComponent } from './pages/personnalisation/grid/grid.component';
+import { LabRecapitulatifComponent } from './pages/personnalisation/lab-recapitulatif/lab-recapitulatif.component';
+import { InstagramComponent } from './pages/instagram/instagram.component';
+
 
 
 
 @NgModule({
   declarations: [
     GridComponent,
-    AppComponent
+    AppComponent,
+    EnterComponent,
+    MenuComponent,
+    HomeComponent,
+    ConceptComponent,
+    LabStepMenuComponent,
+    LabEnterComponent,
+    LabTypeComponent,
+    LabAppretsComponent,
+    LabPatternComponent,
+    LabRecapitulatifComponent,
+    InstagramComponent,
+
   ],
   imports: [
     BrowserModule,
