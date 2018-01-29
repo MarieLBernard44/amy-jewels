@@ -1,0 +1,30 @@
+.bloc-enter {
+  margin-top: 10%;
+}
+
+.slogan {
+  text-transform: uppercase;
+  color: #5f5f5f;
+  font-size: 20px;
+}
+
+.bloc-slogan {
+  border-top: 1px solid #dedede;
+}
+
+.logo-amy {
+  width: 100%;
+}
+
+.enter {
+  color: #00b0a5;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 992px) {
+  .slogan {
+    font-size: 16px;
+  }
+}
+
+

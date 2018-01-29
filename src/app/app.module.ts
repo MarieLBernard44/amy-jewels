@@ -2,6 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routing } from './app-routing.module';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 /////////////////////////////////////    COMPONENTS    //////////////////////////////////////////////////////////////
@@ -42,6 +43,7 @@ import { InstagramComponent } from './pages/instagram/instagram.component';
   imports: [
     BrowserModule,
     Routing,
+    NgbModule.forRoot()
   ],
   providers: [
   ],
