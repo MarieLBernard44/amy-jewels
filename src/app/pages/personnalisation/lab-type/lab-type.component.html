@@ -1,3 +1,90 @@
 <app-lab-step-menu></app-lab-step-menu>
 
-<h3> Ici vous allez choisir la taille et le type de bijou que vous souhaitez commander </h3>
+<div class="bloc-form col-12 col-md-8 mx-auto">
+    <div class="row">
+
+        <!--- FORMULAIRE DU TYPE -->
+        <div class="col-12 col-md-6">
+            <form [formGroup]='typeBijouForm'>
+                <div class="form-group type-bijou p-3">
+                    <div class="radio">
+                        <label><input class="mr-2" type="radio" name="bijou" value="bracelet" formControlName="bijou" (click)="valeurBijou($event)">Bracelet</label>
+                    </div>
+                    <div class="radio">
+                        <label><input class="mr-2" type="radio" name="bijou" value="collier" formControlName="bijou" (click)="valeurBijou($event)">Collier</label>
+                    </div>
+                    <div class="radio">
+                        <label><input class="mr-2" type="radio" name="bijou" value="bo" formControlName="bijou" (click)="valeurBijou($event)">Boucles d'oreille</label>
+                    </div>
+                    <div class="text-center text-right">
+                        <!--button [disabled]="!typeBijouForm.valid" type="submit" class="btn col-12 col-sm-8 btn-valid-personnalisation"> Valider </button-->
+                    </div>
+                    
+                </div>  
+            </form>
+        </div>
+<!-------------------------------------------------------------------------------------->
+        <!--- FORMULAIRE TAILLE BRACELET-->
+        <div class="col-12 col-md-6" *ngIf="bracelet">
+            <form [formGroup]='tailleBraceletForm' >
+                <div class="form-group type-bijou p-3">
+                    <div class="row">
+                        <div class="radio col-6">
+                            <label><input class="mr-2" type="radio" name="taillebracelet" value="xs" formControlName="taillebracelet" (click)="valeurTaille($event)">XS</label>
+                        </div>
+                        <div class="radio col-6">
+                            <label><input class="mr-2" type="radio" name="taillebracelet" value="s" formControlName="taillebracelet" (click)="valeurTaille($event)">S</label>
+                        </div>
+                        <div class="radio col-6">
+                            <label><input class="mr-2" type="radio" name="taillebracelet" value="m" formControlName="taillebracelet" (click)="valeurTaille($event)">M</label>
+                        </div>
+                        <div class="radio col-6">
+                            <label><input class="mr-2" type="radio" name="taillebracelet" value="l" formControlName="taillebracelet" (click)="valeurTaille($event)">L</label>
+                        </div>
+                        <div class="radio col-6">
+                            <label><input class="mr-2" type="radio" name="taillebracelet" value="xl" formControlName="taillebracelet" (click)="valeurTaille($event)">XL</label>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                            <!--button [disabled]="!tailleBraceletForm.valid" type="submit" class="btn col-12 col-sm-8 btn-valid-personnalisation"> Valider </button-->
+                    </div>
+                </div>  
+            </form>
+        </div> 
+<!-------------------------------------------------------------------------------------->
+        <!--- FORMULAIRE TAILLE COLLIER-->
+        <div class="col-12 col-md-6" *ngIf="collier">
+                <form [formGroup]='tailleCollierForm' >
+                    <div class="form-group type-bijou p-3">
+                        <div class="radio">
+                            <label><input class="mr-2" type="radio" name="taillecollier" value="RLC" formControlName="taillecollier" (click)="valeurTaille($event)">Ras le cou</label>
+                        </div>
+                        <div class="radio">
+                            <label><input class="mr-2" type="radio" name="taillecollier" value="MDM" formControlName="taillecollier" (click)="valeurTaille($event)">Medium</label>
+                        </div>
+                        <div class="radio">
+                            <label><input class="mr-2" type="radio" name="taillecollier" value="STR" formControlName="taillecollier" (click)="valeurTaille($event)">Sautoir</label>
+                        </div>
+                        <div class="text-center">
+                                <!--button [disabled]="!tailleCollierForm.valid" type="submit" class="btn col-12 col-sm-8 btn-valid-personnalisation"> Valider </button-->
+                        </div>
+                    </div>  
+                </form>
+            </div> 
+<!-------------------------------------------------------------------------------------->
+            <!--- FORMULAIRE TAILLE BOUCLE OREILLE-->
+            <div class="col-12 col-md-6 p-3 bloc-taille-bo text-center" *ngIf="bo">
+                <span class="taille-bo"> Les boucles d'oreille sont de taille unique </span>
+            </div>
+
+    </div>
+    <div class="btn-valid-type text-center mb-3">
+        <button [disabled]="validFormulaireTypeAndTaille()" routerLink="/page/lab/apprets" type="submit" class="btn col-12 col-sm-8 btn-valid-personnalisation"> Continuer </button>
+    </div>
+</div>
+
+
+
+
+
+

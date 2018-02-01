@@ -1,0 +1,25 @@
+.type-bijou,
+.bloc-taille-bo {
+    border: 1px solid #dedede;
+    border-radius: 10px;
+}
+
+form,
+.bloc-taille-bo {
+    margin-top: 20px;
+}
+
+.bloc-taille-bo {
+    height: 100%;
+}
+
+.btn-valid-personnalisation {
+    background: #00b0a5;
+    color: white;
+}
+
+@media screen and (min-width: 768px) {
+    .bloc-form {
+        margin-left: 50px;
+    }
+}

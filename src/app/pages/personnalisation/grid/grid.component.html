@@ -1,6 +1,6 @@
 <app-lab-step-menu></app-lab-step-menu>
 
-<div class="container">
+<div class="container bloc-personnalisation">
 
     <h1> {{plume.name}}</h1>
 
@@ -8,11 +8,11 @@
       
       <div class="col-xs-12 col-md-8">
         <div class="ligne row" *ngFor="let row of rows">
-          <div *ngIf="row.id == 5 || row.id == 7" style="margin-left: 15px"> </div>
-          <div *ngIf="row.id == 4 || row.id == 8" style="margin-left: 30px"> </div>
-          <div *ngIf="row.id == 3 || row.id == 9" style="margin-left: 45px"> </div>
-          <div *ngIf="row.id == 2 || row.id == 10" style="margin-left: 60px"> </div>
-          <div *ngIf="row.id == 1 || row.id == 11" style="margin-left: 75px"> </div>
+          <div *ngIf="row.id == 5 || row.id == 7" style="margin-left: 10px"> </div>
+          <div *ngIf="row.id == 4 || row.id == 8" style="margin-left: 20px"> </div>
+          <div *ngIf="row.id == 3 || row.id == 9" style="margin-left: 30px"> </div>
+          <div *ngIf="row.id == 2 || row.id == 10" style="margin-left: 40px"> </div>
+          <div *ngIf="row.id == 1 || row.id == 11" style="margin-left: 50px"> </div>
           <div class="perle" *ngFor="let perle of row.perle" (click)="colorize($event)"> </div>
         </div>
       </div>

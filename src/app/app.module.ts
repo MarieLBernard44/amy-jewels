@@ -19,7 +19,7 @@ import { LabPatternComponent } from './pages/personnalisation/lab-pattern/lab-pa
 import { GridComponent } from './pages/personnalisation/grid/grid.component';
 import { LabRecapitulatifComponent } from './pages/personnalisation/lab-recapitulatif/lab-recapitulatif.component';
 import { InstagramComponent } from './pages/instagram/instagram.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -43,6 +43,8 @@ import { InstagramComponent } from './pages/instagram/instagram.component';
   imports: [
     BrowserModule,
     Routing,
+    FormsModule,
+    ReactiveFormsModule,
     NgbModule.forRoot(),
     AngularFontAwesomeModule
   ],

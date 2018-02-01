@@ -1,0 +1,38 @@
+.step-wizard-lab {
+    display: flex;
+    flex-direction: row;
+}
+
+.step {
+    flex: auto;
+}
+
+.nb-step span {
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+    border: 1px solid #5f5f5f;
+    cursor: pointer;
+}
+
+.step-wizard-lab > .active > span:hover,
+.step-wizard-lab > .active > span:focus{
+    border: 1px solid #5f5f5f;
+    background: #00b0a5;
+}
+
+/*.step-wizard-lab span {
+    border-width: 0px 80px 80px 80px;
+    border-color: transparent transparent  #00b0a5 transparent
+}*/
+
+
+.progress {
+    height: 10px;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.progress-bar {
+    background: #00b0a5;
+}

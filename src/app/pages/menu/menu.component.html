@@ -1,4 +1,4 @@
-
+<header>
 
 <!-- MENU POUR MOBILE ET TABLETTE -->
 <nav class="d-sm-block d-md-block d-lg-none navbar navbar-expand-lg navbar-light">
@@ -24,9 +24,9 @@
         <li class="nav-item"> <!-- MON COMPTE -->
             <a class="nav-link menu-portable text-uppercase pl-3 m-1" routerLink="#"> <i class="fa fa-user-o pr-2" aria-hidden="true"></i> Mon compte</a>
         </li>
-        <li class="nav-item"> <!-- WISHLIST -->
-            <a class="nav-link menu-portable text-uppercase pl-3 m-1" routerLink="#"><i class="fa fa-heart-o pr-2" aria-hidden="true"></i>Ma wishlist</a>
-        </li>
+        <!--li class="nav-item"--> <!-- WISHLIST -->
+            <!--a class="nav-link menu-portable text-uppercase pl-3 m-1" routerLink="#"><i class="fa fa-heart-o pr-2" aria-hidden="true"></i>Ma wishlist</a>
+        </li-->
         <li class="nav-item"> <!-- PANIER -->
             <a class="nav-link menu-portable text-uppercase pl-3 m-1" routerLink="#"><i class="fa fa-shopping-cart pr-2" aria-hidden="true"></i>Mon panier</a>
         </li>
@@ -57,9 +57,9 @@
             <li class="nav-item">
                 <a class="nav-link active nav-infos-user text-uppercase" href="#"> <i class="fa fa-user-o pr-2" aria-hidden="true"></i> mon compte</a>
             </li>
-            <li class="nav-item">
+            <!--li class="nav-item">
                 <a class="nav-link nav-infos-user text-uppercase" href="#"> <i class="fa fa-heart-o pr-2" aria-hidden="true"></i>ma wishlist</a>
-            </li>
+            </li-->
             <li class="nav-item">
                 <a class="nav-link nav-infos-user text-uppercase" href="#"><i class="fa fa-shopping-cart pr-2" aria-hidden="true"></i>mon panier</a>
             </li>
@@ -97,10 +97,21 @@
         </ul>
         
   </div>
-    
-
-<router-outlet></router-outlet>
-
-<h3> -------------------- FOOTER -------------------- </h3>
-
 </div>
+    
+</header>
+
+<main>
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+    
+</main>
+
+<footer>
+
+</footer>
+
+
+
+

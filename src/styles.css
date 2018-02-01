@@ -8,11 +8,19 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
+  html {
+    min-height: 100%;
+    border: 10px solid #00b0a5;
+  }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
   .container {
     min-height: auto;
+  }
+  html {
+    min-height: 100%;
+    border: 10px solid #00b0a5;
   }
 }
 
@@ -20,5 +28,22 @@
   .container {
     min-height: auto;
   }
+  html {
+    min-height: 100%;
+    border: 20px solid #00b0a5;
+  }
 }
+
+footer {
+  /*margin-right: 100px;
+  margin-left: 100px;*/
+  position: absolute;
+  bottom: 0;
+}
+
+main {
+  margin-top: 40px;
+  height: auto;
+}
+
 
