@@ -1,6 +1,12 @@
 .container {
   margin-top: 10px;
 }
+
+.btn-valid-personnalisation {
+  background: #00b0a5;
+  color: white;
+}
+
 @media screen and (min-width: 200px) and (max-width: 576px) {
 }
 

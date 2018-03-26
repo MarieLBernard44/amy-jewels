@@ -8,11 +8,11 @@
 }
 
 .nb-step span {
-    width: 100px;
-    height: 100px;
     padding: 30px;
-    border: 1px solid #5f5f5f;
+    background: no-repeat center/100% url("../../../../assets/images/polygone.jpg");
     cursor: pointer;
+    font-family: 'Satisfy', cursive;
+    font-size: 24px;
 }
 
 .step-wizard-lab > .active > span:hover,

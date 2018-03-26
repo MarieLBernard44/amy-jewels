@@ -69,6 +69,13 @@ nav {
     border-left: 0;
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .nav-pc,
+    .nav-infos-user {
+        font-size: 13px;
+    }
+}
+
 
 
 
