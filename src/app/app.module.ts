@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { Routing } from './app-routing.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { Http, Response, RequestOptions, Headers, HttpModule } from '@angular/http';
 
 /////////////////////////////////////    COMPONENTS    //////////////////////////////////////////////////////////////
 import { AppComponent } from './app.component';
@@ -20,8 +21,10 @@ import { GridComponent } from './pages/personnalisation/grid/grid.component';
 import { LabRecapitulatifComponent } from './pages/personnalisation/lab-recapitulatif/lab-recapitulatif.component';
 import { InstagramComponent } from './pages/instagram/instagram.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthenticationComponent } from './pages/authentication/authentication.component';
 
-
+//////////////////////////////// SERVICES /////////////////////////////////////////////////
+import { AuthenticationService } from './pages/authentication/authentication.service';
 
 @NgModule({
   declarations: [
@@ -38,6 +41,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LabPatternComponent,
     LabRecapitulatifComponent,
     InstagramComponent,
+    AuthenticationComponent,
 
   ],
   imports: [
@@ -46,9 +50,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     NgbModule.forRoot(),
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    HttpModule,
   ],
   providers: [
+    AuthenticationService
   ],
   bootstrap: [AppComponent]
 })
