@@ -1,0 +1,65 @@
+<div *ngIf="!decodedToken">
+    <span> Aucune donnée trouvée </span>
+</div>
+
+<div *ngIf="decodedToken">
+
+        <h1 class="pl-4 p-2"> Mes informations personnelles </h1> 
+        <div class="text-right">
+            <span class="require pr-4 mb-4"> * Champs obligatoires </span>
+        </div>
+      
+        <form>
+            <div class="row mx-auto mt-5">
+      
+              <div class="col-10 ml-4">
+                  <label for="email"> Email* </label>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="{{decodedToken.email}}"/> <br/>
+              </div>       
+      
+              <div class="col-5 ml-4">
+                <label for="nom"> Nom* </label>
+                <input type="text" class="form-control" name="nom" id="nom" placeholder="{{decodedToken.nom}}"/> <br/>
+              </div>
+              <div class="col-5">
+                  <label for="prenom"> Prénom* </label>
+                  <input type="text" class="form-control" name="prenom" id="prenom" placeholder="{{decodedToken.prenom}}"/> <br/>
+              </div>
+      
+              <div class="col-10 ml-4">
+                  <label for="address"> Adresse* </label>
+                  <input type="text" class="form-control" name="address" id="address" placeholder="{{decodedToken.address}}"/> <br/>
+              </div>
+      
+              <div class="col-10 ml-4">
+                  <label for="complementAddress"> Complément d'adresse </label>
+                  <input type="text" class="form-control" name="complementAddress" id="complementAddress" placeholder="{{decodedToken.complementAddress}}"/> <br/>
+              </div>
+      
+              <div class="col-5 ml-4">
+                  <label for="zipCode"> Code postal* </label>
+                  <input type="text" class="form-control" name="zipCode" id="zipCode" placeholder="{{decodedToken.zipCode}}"/> <br/>
+              </div>
+      
+              <div class="col-5">
+                  <label for="ville"> Ville* </label>
+                  <input type="text" class="form-control" name="ville" id="ville" placeholder="{{decodedToken.ville}}"/> <br/>
+              </div>
+      
+              <div class="col-5 ml-4">
+                  <label for="telFixe"> Téléphone fixe </label>
+                  <input type="text" class="form-control" name="telFixe" id="telFixe" placeholder="{{decodedToken.telFIxe}}"/> <br/>
+              </div>
+      
+              <div class="col-5">
+                  <label for="telPortable"> Téléphone portable </label>
+                  <input type="text" class="form-control" name="telPortable" id="telPortable" placeholder="{{decodedToken.telPortable}}"/> <br/>
+              </div>
+                
+            </div>
+      
+            <hr class="m-0"/>
+                  
+        </form>
+      
+      </div>

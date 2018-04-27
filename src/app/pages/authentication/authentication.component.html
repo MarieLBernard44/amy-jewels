@@ -1,7 +1,38 @@
-<div>
-  <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
-    <input type="text" class="login-input" ngModel name="email" placeholder="email" required />
-    <input type="password" class="login-input" ngModel name="password" placeholder="password" required />
-    <button type="submit" class="btn btn-success" [disabled]="!loginForm.valid"> Connexion </button>  
-  </form>
+<div class="mon-compte-bloc mb-5">
+    <div *ngIf="auth.userIsAuthenticated()">
+        <app-mon-compte></app-mon-compte>
+      </div>
+      
+      <div class="connect-register-bloc" *ngIf="!auth.userIsAuthenticated()">
+        <h1 class="pl-4 p-2"> Mon compte </h1>
+        <div class="text-right">
+          <span class="require pr-4 mb-4"> * Champs obligatoires </span>
+        </div>
+        <div class="row">
+          <div class="col-11 col-md-5 connecting-bloc m-2 mx-auto p-2">
+              <h2 class="text-uppercase"> Me connecter </h2>
+              <form [formGroup]="formConnexion" #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
+                  <div class="form-group">
+                    <label for="email"> Adresse Email* </label>
+                    <input type="text" class="login-input form-control" ngModel name="email" id="email" formControlName="email" (blur)="validLogin()" (focus)="cleanLogin()"/> <br/>
+                    <div *ngIf="msgErrLogin" class="errConnexion mb-4">
+                        <i class="fa fa-exclamation-triangle"></i> {{msgErrLogin}}
+                    </div>
+                    <label for="password"> Mot de passe* </label>
+                    <input type="password" class="login-input form-control" ngModel name="password" id="password" formControlName="password" (blur)="validPassword()" (focus)="cleanPassword()"/> <br/>
+                    <div *ngIf="msgErrPassword" class="errConnexion mb-4">
+                        <i class="fa fa-exclamation-triangle"></i> {{msgErrPassword}}
+                    </div>
+                    <button type="submit" class="btn btn-valid" [disabled]="!loginForm.valid"> Connexion </button>  
+                  </div>
+              </form>
+          </div>
+          <div class="col-11 col-md-5 registering-bloc m-2  mx-auto p-2">
+            <h2 class="text-uppercase"> Pas encore de compte web ? </h2>
+            <a href="#" routerLink="/page/register" class="create-account"> <i class="fa fa-chevron-right"></i>
+              Créer mon compte </a>
+          </div>
+        </div>
+      </div>
 </div>
+

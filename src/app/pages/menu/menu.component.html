@@ -22,12 +22,15 @@
             <a class="nav-link menu-portable text-uppercase pl-3 m-1" routerLink="/page/instagram"><i class="fa fa-instagram pr-2" aria-hidden="true"></i> Instagram</a>
         </li>
         <li class="nav-item"> <!-- MON COMPTE -->
-            <a class="nav-link menu-portable text-uppercase pl-3 m-1" routerLink="/page/login"> <i class="fa fa-user-o pr-2" aria-hidden="true"></i> Connexion </a>
+            <a class="nav-link menu-portable text-uppercase pl-3 m-1" routerLink="/page/login"> <i class="fa fa-user-o pr-2" aria-hidden="true"></i> 
+                <span *ngIf="!auth.userIsAuthenticated()">Connexion</span>
+                <span *ngIf="auth.userIsAuthenticated()">Mon compte</span> 
+            </a>
         </li>
         <!--li class="nav-item"--> <!-- WISHLIST -->
             <!--a class="nav-link menu-portable text-uppercase pl-3 m-1" routerLink="#"><i class="fa fa-heart-o pr-2" aria-hidden="true"></i>Ma wishlist</a>
         </li-->
-        <li class="nav-item"> <!-- PANIER -->
+        <li *ngIf="auth.userIsAuthenticated()" class="nav-item"> <!-- PANIER -->
             <a class="nav-link menu-portable text-uppercase pl-3 m-1" routerLink="#"><i class="fa fa-shopping-cart pr-2" aria-hidden="true"></i>Mon panier</a>
         </li>
         <li class="nav-item"> <!-- CONTACT -->
@@ -55,13 +58,27 @@
         
         <ul class="col-6 hidden-md-down nav justify-content-end">
             <li class="nav-item">
-                <a class="nav-link active nav-infos-user text-uppercase" href="#" routerLink="/page/login"> <i class="fa fa-user-o pr-2" aria-hidden="true"></i> connexion </a>
+                <a class="nav-link active nav-infos-user text-uppercase" href="#" routerLink="/page/login">  
+                    <span *ngIf="!auth.userIsAuthenticated()"> <i class="fa fa-user-o pr-2" aria-hidden="true"></i>Mon compte</span>
+                    <div class="dropdown" *ngIf="auth.userIsAuthenticated()">
+                        <span  class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-user-o pr-2" aria-hidden="true"></i> {{decodedToken.prenom}} {{decodedToken.nom}}
+                        </span>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#" (click)="auth.logout()">Déconnexion</a>
+                        </div>
+                    </div>   
+                </a>
             </li>
             <!--li class="nav-item">
                 <a class="nav-link nav-infos-user text-uppercase" href="#"> <i class="fa fa-heart-o pr-2" aria-hidden="true"></i>ma wishlist</a>
             </li-->
-            <li class="nav-item">
-                <a class="nav-link nav-infos-user text-uppercase" href="#"><i class="fa fa-shopping-cart pr-2" aria-hidden="true"></i>mon panier</a>
+            <li *ngIf="auth.userIsAuthenticated()" class="nav-item">
+                <a class="nav-link nav-infos-user text-uppercase" href="#">
+                    <span >
+                        <i class="fa fa-shopping-cart pr-2" aria-hidden="true"></i>mon panier
+                    </span>
+                </a>
             </li>
         </ul>
         

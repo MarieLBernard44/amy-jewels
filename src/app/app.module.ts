@@ -2,7 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routing } from './app-routing.module';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { Http, Response, RequestOptions, Headers, HttpModule } from '@angular/http';
 
@@ -25,6 +25,8 @@ import { AuthenticationComponent } from './pages/authentication/authentication.c
 
 //////////////////////////////// SERVICES /////////////////////////////////////////////////
 import { AuthenticationService } from './pages/authentication/authentication.service';
+import { MonCompteComponent } from './pages/authentication/mon-compte/mon-compte.component';
+import { RegisterComponent } from './pages/authentication/register/register.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { AuthenticationService } from './pages/authentication/authentication.ser
     LabRecapitulatifComponent,
     InstagramComponent,
     AuthenticationComponent,
+    MonCompteComponent,
+    RegisterComponent,
 
   ],
   imports: [

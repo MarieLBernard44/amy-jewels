@@ -1,0 +1,130 @@
+<div class="mon-compte-bloc mb-5">
+
+  <h1 class="pl-4 p-2"> Créer mon compte </h1> 
+  <div class="text-right">
+      <span class="require pr-4 mb-4"> * Champs obligatoires </span>
+  </div>
+
+  <form [formGroup]="formCreateAccount" (ngSubmit)="register(formCreateAccount.value)">
+      <div class="row mx-auto mt-5">
+
+        <div class="col-10 ml-4">
+            <label for="email"> Email* </label>
+            <input type="email" class="form-control" name="email" id="email" formControlName="email" (blur)="validEmail()" (focus)="cleanEmail()"/> <br/>
+            <div *ngIf="msgErrEmail" class="errConnexion mb-4">
+                <i class="fa fa-exclamation-triangle"></i> {{msgErrEmail}}
+            </div>
+        </div>
+
+        <div class="col-5 ml-4">
+            <label for="mdp"> Mot de passe* </label>
+            <input type="password" class="form-control" name="mdp" id="mdp" formControlName="mdp" (blur)="validMdp()" (focus)="cleanMdp()"/> <br/>
+            <div *ngIf="msgErrMdp" class="errConnexion mb-4">
+                <i class="fa fa-exclamation-triangle"></i> {{msgErrMdp}}
+            </div>
+        </div>
+
+        <div class="col-5">
+            <label for="confirmMdp"> Confirmation de mon mot de passe* </label>
+            <input type="password" class="form-control" name="confirmMdp" id="confirmMdp" (blur)="validConfirmMdp()" (focus)="cleanConfirmMdp()"formControlName="confirmMdp"/> <br/>
+            <div *ngIf="msgErrConfirmMdp" class="errConnexion mb-4">
+                <i class="fa fa-exclamation-triangle"></i> {{msgErrConfirmMdp}}
+            </div>
+        </div>
+
+        <div class="col-3 form-check ml-5 mb-4">
+          <input class="form-check-input" type="radio" name="civilite" id="miss" value="miss" formControlName="civilite">
+          <label class="form-check-label" for="miss">
+            Melle
+          </label>
+        </div>
+        <div class="col-3 form-check ml-2">
+          <input class="form-check-input" type="radio" name="civilite" id="mrs" value="mrs" formControlName="civilite">
+          <label class="form-check-label" for="mrs">
+            Mme
+          </label>
+        </div>
+        <div class="col-3 form-check ml-2">
+          <input class="form-check-input" type="radio" name="civilite" id="mr" value="mr" formControlName="civilite">
+          <label class="form-check-label" for="mr">
+            M.
+          </label>
+        </div>          
+
+        <div class="col-5 ml-4">
+          <label for="nom"> Nom* </label>
+          <input type="text" class="form-control" name="nom" id="nom" formControlName="nom" (blur)="validNom()" (focus)="cleanNom()"/> <br/>
+          <div *ngIf="msgErrNom" class="errConnexion mb-4">
+              <i class="fa fa-exclamation-triangle"></i> {{msgErrNom}} <br/>
+          </div>
+        </div>
+        <div class="col-5">
+            <label for="prenom"> Prénom* </label>
+            <input type="text" class="form-control" name="prenom" id="prenom" formControlName="prenom" (blur)="validPrenom()" (focus)="cleanPrenom()"/> <br/>
+            <div *ngIf="msgErrPrenom" class="errConnexion mb-4">
+                <i class="fa fa-exclamation-triangle"></i> {{msgErrPrenom}} <br/>
+            </div>
+        </div>
+
+        <div class="col-10 ml-4">
+            <label for="address"> Adresse* </label>
+            <input type="text" class="form-control" name="address" id="address" formControlName="address" (blur)="validAddress()" (focus)="cleanAddress()"/> <br/>
+            <div *ngIf="msgErrAddress" class="errConnexion mb-4">
+                <i class="fa fa-exclamation-triangle"></i> {{msgErrAddress}} <br/>
+            </div>
+        </div>
+
+        <div class="col-10 ml-4">
+            <label for="complementAddress"> Complément d'adresse </label>
+            <input type="text" class="form-control" name="complementAddress" id="complementAddress" formControlName="complementAddress"/> <br/>
+        </div>
+
+        <div class="col-5 ml-4">
+            <label for="zipCode"> Code postal* </label>
+            <input type="text" class="form-control" name="zipCode" id="zipCode" formControlName="zipCode" (blur)="validZipCode()" (focus)="cleanZipCode()"/> <br/>
+            <div *ngIf="msgErrZipCode" class="errConnexion mb-4">
+                <i class="fa fa-exclamation-triangle"></i> {{msgErrZipCode}} <br/>
+            </div>
+        </div>
+
+        <div class="col-5">
+            <label for="ville"> Ville* </label>
+            <input type="text" class="form-control" name="ville" id="ville" formControlName="ville" (blur)="validVille()" (focus)="cleanVille()"/> <br/>
+            <div *ngIf="msgErrVille" class="errConnexion mb-4">
+                <i class="fa fa-exclamation-triangle"></i> {{msgErrVille}} <br/>
+            </div>
+        </div>
+
+        <div class="col-5 ml-4">
+            <label for="telFixe"> Téléphone fixe </label>
+            <input type="text" class="form-control" name="telFixe" id="telFixe" formControlName="telFixe" (blur)="validTelFixe()" (focus)="cleanTelFixe()"/> <br/>
+            <div *ngIf="msgErrTelFixe" class="errConnexion mb-4">
+                <i class="fa fa-exclamation-triangle"></i> {{msgErrTelFixe}} <br/>
+            </div>
+        </div>
+
+        <div class="col-5">
+            <label for="telPortable"> Téléphone portable </label>
+            <input type="text" class="form-control" name="telPortable" id="telPortable" formControlName="telPortable" (blur)="validTelPortable()" (focus)="cleanTelPortable()"/> <br/>
+            <div *ngIf="msgErrTelPortable" class="errConnexion mb-4">
+                <i class="fa fa-exclamation-triangle"></i> {{msgErrTelPortable}} <br/>
+            </div>
+        </div>
+
+        <div class="col-5 ml-4">
+            <label for="dateNaiss"> Date de naissance </label>
+            <input type="date" class="form-control" name="dateNaiss" id="dateNaiss" formControlName="dateNaiss"/> <br/>
+        </div>
+          
+      </div>
+
+      <hr class="m-0"/>
+
+      <div class="text-center mx-auto">
+        <button type="submit" class="btn btn-valid col-10 col-md-5 m-3" [disabled]="!formCreateAccount.valid"> Valider </button>
+      </div>
+            
+  </form>
+
+</div>
+

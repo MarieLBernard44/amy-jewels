@@ -7,6 +7,7 @@
   color: white;
 }
 
+
 @media screen and (min-width: 200px) and (max-width: 576px) {
 }
 
@@ -52,4 +53,74 @@ main {
   height: auto;
 }
 
+/***************** STYLE VALIDATION FORMULAIRES ************************/
+.ng-valid[required], .ng-valid.required{
+  border-left: 5px solid #cf2b4e;
+}
+
+.ng-invalid:not(form){
+  border-left: 5px solid #cf2b4e;
+}
+
+.ng-valid:not(form){
+  border-left: 5px solid #00b0a5;
+}
+
+.errConnexion {
+  color: #cf2b4e;
+  background: #ffeded;
+  padding: 7px;
+}
+
+.btn-valid {
+    background: #00b0a5;
+    color: white;
+    width: 100%;
+    font-size: 18px;
+}
+ /**********************************************************************/
+
+/***************** BLOC MON COMPTE **************************************/
+.mon-compte-bloc {
+  border: 1px solid #fde6a7;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.mon-compte-bloc h1 {
+  background: hsl(56, 100%, 86%);
+  font-size: 30px;
+  font-family: 'Kaushan Script', cursive;
+}
+
+@media (min-width: 1200px) {
+  .mon-compte-bloc {
+      margin-left: 150px;
+      margin-right: 150px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .mon-compte-bloc {
+      margin-left: 100px;
+      margin-right: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .connect-register-bloc h1 {
+      text-align: center;
+  }
+
+  .mon-compte-bloc h1 {
+    text-align: center;
+}
+
+  .mon-compte-bloc {
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+}
+
+/************************************************************************/
 

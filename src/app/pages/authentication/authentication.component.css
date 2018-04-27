@@ -1,0 +1,36 @@
+.connect-register-bloc h1 {
+    background: hsl(56, 100%, 86%);
+    font-size: 30px;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.connect-register-bloc h2 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1pw solid black;
+}
+
+.create-account {
+    color: #00b0a5;
+    font-size: 20px;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.btn-valid,
+.create-account {
+    cursor: pointer;
+}
+
+.connecting-bloc,
+.registering-bloc {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .connect-register-bloc h1 {
+        text-align: center;
+    }
+  }
